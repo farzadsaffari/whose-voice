@@ -56,7 +56,7 @@ Why:
 | 5 s | low-risk | 0.885% (138) [0.744%–1.044%] | 0.25% (1) [0.01%–1.38%] | yes |
 | 5 s | private | 0.135% (21) [0.083%–0.206%] | 0.25% (1) [0.01%–1.38%] | no |
 
-![Owner shut out by speech length](results.png)
+![Owner shut out by speech length](src/results.png)
 
 ### Background noise (3 s, white noise)
 
