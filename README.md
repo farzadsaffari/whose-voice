@@ -14,7 +14,7 @@ python src/evaluate.py               # downloads ~700 MB once, writes results.md
 python -m pytest                 # tests, no data or model needed
 ```
 
-Or on GitHub, without installing anything: open the Actions tab, choose evaluate, then Run workflow. It runs the same evaluation on GitHub’s servers (20 min) and attaches results.md, results.png and thresholds.json to the run. The tests run on every push by themselves.
+Or on GitHub, without installing anything: open the Actions tab, choose evaluate, then Run workflow. It runs the same evaluation on GitHub’s servers (30 min) and attaches results.md, results.png and thresholds.json to the run. The tests run on every push by themselves.
 
 
 ## The answer
