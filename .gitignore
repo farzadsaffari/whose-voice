@@ -1,0 +1,6 @@
+data/
+pretrained_models/
+.venv/
+__pycache__/
+.pytest_cache/
+*.wav

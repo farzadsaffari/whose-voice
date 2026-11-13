@@ -1,0 +1,10 @@
+# Python 3.11. Pinned so the numbers can be repeated.
+numpy==1.26.4
+scipy==1.13.1
+soundfile==0.12.1
+matplotlib==3.9.2
+torch==2.5.1
+torchaudio==2.5.1
+speechbrain==1.0.3
+huggingface_hub==0.25.2
+pytest==8.3.3

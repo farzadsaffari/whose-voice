@@ -1,0 +1,33 @@
+name: evaluate
+on: workflow_dispatch   # run by hand: Actions tab -> evaluate -> Run workflow
+ 
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install (CPU-only torch, much smaller than the default build)
+        run: |
+          pip install torch==2.5.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt
+      - name: Reuse the data and model from earlier runs
+        uses: actions/cache@v4
+        with:
+          path: |
+            data
+            pretrained_models
+          key: librispeech-ecapa-v1
+      - run: python src/evaluate.py
+      - name: Keep the results
+        uses: actions/upload-artifact@v4
+        with:
+          name: results
+          path: |
+            results.md
+            results.png
+            thresholds.json
+ 
